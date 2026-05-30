@@ -1,0 +1,9 @@
+streamlit>=1.33
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.3
+plotly>=5.18
+joblib>=1.3
+# MySQL driver (either works; install at least one for MySQL support)
+mysql-connector-python>=8.3
+PyMySQL>=1.1

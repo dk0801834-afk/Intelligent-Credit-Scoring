@@ -1,0 +1,6 @@
+data/credit_app.db
+models/credit_model.joblib
+models/metrics.json
+.env
+__pycache__/
+*.pyc
