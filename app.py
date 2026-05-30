@@ -15,6 +15,16 @@ import datetime as dt
 import pandas as pd
 import streamlit as st
 
+import sys
+import os
+
+# Add the root directory to the system path
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+import pandas as pd
+import streamlit as st
+
+
 from src import config, database, model, retrain, charts
 from src.styles import CSS
 
