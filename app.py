@@ -286,18 +286,18 @@ with tab_model:
     st.plotly_chart(charts.feature_importance(met.get("feature_importance", [])),
                     use_container_width=True)
 
-    st.subheader("How background retraining works")
-    st.markdown(
-        f"""
-        - Every scored application is stored in the **{database.backend_name()}** database.
-        - When **{config.RETRAIN_THRESHOLD}** new records accumulate, a **daemon thread**
-          retrains the model **without blocking** the interface.
-        - Rows where you supplied the *real outcome* are used as ground-truth labels;
-          otherwise the model's own prediction seeds the next round.
-        - Each run is logged to `training_runs` so you can track performance over time
-          in the chart above.
-        """
-    )
+    # st.subheader("How background retraining works")
+    # st.markdown(
+    #     f"""
+    #     - Every scored application is stored in the **{database.backend_name()}** database.
+    #     - When **{config.RETRAIN_THRESHOLD}** new records accumulate, a **daemon thread**
+    #       retrains the model **without blocking** the interface.
+    #     - Rows where you supplied the *real outcome* are used as ground-truth labels;
+    #       otherwise the model's own prediction seeds the next round.
+    #     - Each run is logged to `training_runs` so you can track performance over time
+    #       in the chart above.
+    #     """
+    # )
 
     with st.expander("📜 Training run history"):
         runs = database.fetch_training_runs_df()
