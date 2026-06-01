@@ -85,7 +85,7 @@ with st.sidebar:
     if met:
         st.markdown("**Active model**")
         st.metric("Accuracy", f"{met.get('accuracy', 0)*100:.1f}%")
-        st.metric("ROC-AUC", f"{met.get('roc_auc', 0):.3f}")
+        # st.metric("ROC-AUC", f"{met.get('roc_auc', 0):.3f}")
         st.caption(f"Trained: {met.get('trained_at', '—')}")
         st.caption(f"Samples: {met.get('n_samples', 0):,}")
     st.divider()
@@ -263,10 +263,10 @@ with tab_model:
     m1, m2, m3, m4, m5 = st.columns(5)
     for col, label, key, fmt in [
         (m1, "Accuracy", "accuracy", "{:.1%}"),
-        (m2, "ROC-AUC", "roc_auc", "{:.3f}"),
-        (m3, "Precision", "precision", "{:.1%}"),
-        (m4, "Recall", "recall", "{:.1%}"),
-        (m5, "F1 score", "f1", "{:.3f}"),
+        # (m2, "ROC-AUC", "roc_auc", "{:.3f}"),
+        (m2, "Precision", "precision", "{:.1%}"),
+        (m3, "Recall", "recall", "{:.1%}"),
+        (m4, "F1 score", "f1", "{:.3f}"),
     ]:
         val = met.get(key)
         txt = fmt.format(val) if val is not None else "—"
