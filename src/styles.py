@@ -47,9 +47,17 @@ html, body, [class*="css"] { font-family:'Inter',sans-serif; }
   background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.08) 50%,transparent 70%);
   transform:translateX(-100%); animation:shine 4.5s ease-in-out infinite;
 }
-.hero h1{ font-size:2.0rem; font-weight:800; margin:0;
-  background:linear-gradient(90deg,var(--text),#6c8cff); -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;}
+
+.hero h1 {
+    font-size: 2.0rem;
+    font-weight: 800;
+    margin: 0;
+    /* #fff ki jagah var(--text) use kiya hai taki color dynamic rahe */
+    background: linear-gradient(90deg, var(--text), #6c8cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  
 .hero p{ color:var(--muted); margin:.4rem 0 0; font-size:1.02rem;}
 
 /* ---------- Metric / KPI cards ---------- */
