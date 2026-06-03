@@ -52,12 +52,11 @@ html, body, [class*="css"] { font-family:'Inter',sans-serif; }
     font-size: 2.0rem;
     font-weight: 800;
     margin: 0;
-    /* #fff ki jagah var(--text) use kiya hai taki color dynamic rahe */
-    background: linear-gradient(90deg, var(--text), #6c8cff);
+    /* var(--text) ki jagah currentColor lagaya hai */
+    background: linear-gradient(90deg, currentColor, #6c8cff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-  
 .hero p{ color:var(--muted); margin:.4rem 0 0; font-size:1.02rem;}
 
 /* ---------- Metric / KPI cards ---------- */
