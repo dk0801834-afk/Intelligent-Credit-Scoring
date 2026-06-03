@@ -14,9 +14,12 @@ PAPER = "rgba(0,0,0,0)"
 
 def _base(fig, height=340, title=None):
     fig.update_layout(
-        template=TEMPLATE, paper_bgcolor=PAPER, plot_bgcolor=PAPER,
-        height=height, margin=dict(l=10, r=10, t=40 if title else 10, b=10),
-        font=dict(family="Inter", color="#e8ecf6"),
+        template="streamlit",  # TEMPLATE ki jagah "streamlit" lagaya
+        paper_bgcolor=PAPER,
+        plot_bgcolor=PAPER,
+        height=height,
+        margin=dict(l=10, r=10, t=40 if title else 10, b=10),
+        font=dict(family="Inter"),  # Yahan se color="#e8ecf6" HATA diya hai
         title=dict(text=title, x=0.02, font=dict(size=16)) if title else None,
         hoverlabel=dict(bgcolor="#1b2030", font_size=12, font_family="Inter"),
         transition=dict(duration=600, easing="cubic-in-out"),
