@@ -34,6 +34,28 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
+# Initializing the theme
+if "theme" not in st.session_state:
+    st.session_state.theme = "light" # Default theme light set ki hai
+
+# 2. for updating we use callback
+def toggle_theme():
+    if st.session_state.theme == "light":
+        st._config.set_option("theme.base", "dark")
+        st.session_state.theme = "dark"
+    else:
+        st._config.set_option("theme.base", "light")
+        st.session_state.theme = "light"
+
+# 3. for toggle in sidebar add switch
+st.sidebar.toggle(
+    label="🌙 Dark Mode",
+    value=(st.session_state.theme == "dark"),
+    on_change=toggle_theme
+)
+
+
 st.markdown(CSS, unsafe_allow_html=True)
 
 
