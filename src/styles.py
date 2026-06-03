@@ -101,8 +101,12 @@ html, body, [class*="css"] { font-family:'Inter',sans-serif; }
 .stButton>button:active{ transform:translateY(0) scale(.99);}
 
 /* sidebar */
-section[data-testid="stSidebar"]{ background:linear-gradient(180deg,#12151f,#0d1018);
-  border-right:1px solid var(--border);}
+/* sidebar */ 
+section[data-testid="stSidebar"] { 
+    /* Hardcoded colors ko dynamic variables se replace kiya hai */
+    background: linear-gradient(180deg, var(--secondary-background-color), var(--background-color)); 
+    border-right: 1px solid var(--border);
+}
 
 /* tabs */
 .stTabs [data-baseweb="tab"]{ transition:color .2s ease, border-color .2s ease;}
