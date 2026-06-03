@@ -5,9 +5,22 @@ CSS = """
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --bg-1:#0f1117; --bg-2:#161a26; --card:#1b2030; --card-2:#222a3d;
-  --accent:#6c8cff; --accent-2:#9b6cff; --good:#22c55e; --warn:#f59e0b;
-  --bad:#ef4444; --text:#e8ecf6; --muted:#9aa6c0; --border:#2a3450;
+    /*mapping using dynamic variables */
+    --bg-1: var(--background-color); 
+    --bg-2: var(--background-color); 
+    --card: var(--secondary-background-color); 
+    --card-2: var(--secondary-background-color); 
+    --text: var(--text-color); 
+    
+   
+    --muted: gray; 
+    --border: rgba(128, 128, 128, 0.2); 
+
+    --accent: #6c8cff; 
+    --accent-2: #9b6cff; 
+    --good: #22c55e; 
+    --warn: #f59e0b; 
+    --bad: #ef4444; 
 }
 
 html, body, [class*="css"] { font-family:'Inter',sans-serif; }
@@ -35,7 +48,7 @@ html, body, [class*="css"] { font-family:'Inter',sans-serif; }
   transform:translateX(-100%); animation:shine 4.5s ease-in-out infinite;
 }
 .hero h1{ font-size:2.0rem; font-weight:800; margin:0;
-  background:linear-gradient(90deg,#fff,#c9d4ff); -webkit-background-clip:text;
+  background:linear-gradient(90deg,var(--text),#6c8cff); -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;}
 .hero p{ color:var(--muted); margin:.4rem 0 0; font-size:1.02rem;}
 
