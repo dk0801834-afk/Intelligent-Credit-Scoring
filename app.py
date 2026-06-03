@@ -86,7 +86,7 @@ with st.sidebar:
     st.divider()
 
     st.markdown("**System status**")
-    st.markdown(f"🗄️ Database: 'SQLite'")
+    st.markdown(f"🗄️ Database: `SQLite`")
 
     pending = database.count_untrained()
     st.markdown(f"🆕 New records pending: `{pending} / {config.RETRAIN_THRESHOLD}`")
